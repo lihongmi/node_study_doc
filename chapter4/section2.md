@@ -1,12 +1,16 @@
-# 第2节 http https模块
 
-http.createServer
-    .listen
+# 第2节 文件系统和路径模块
 
-res 响应  req  请求
+fs
+path 
 
-res.end
-res.write
+readFile  异步
 
-req.url
+在读写文件 或者 网络传输下载  
+
+异步asynchronous 同步 synchronous
+
+ajax
+
+
 

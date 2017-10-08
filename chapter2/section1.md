@@ -26,7 +26,7 @@ npm update  包工具 -gd
 npm update  包工具
 
 淘宝镜像
-https://segmentfault.com/a/1190000011140909
+http://www.cnblogs.com/trying/p/4064518.html
 
 借鉴
 
