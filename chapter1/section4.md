@@ -8,9 +8,9 @@ http://www.cnblogs.com/qiaojie/p/5560388.html
 * 方法二
 http://www.w3cmark.com/2016/nodejs-build-system.html
 
-vscode  配置 NodeJs 环境
+vscode  编译调试 nodejs 
 ___
 
-sdlfjlkj
+
 
 

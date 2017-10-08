@@ -6,29 +6,30 @@ nodejs的包管理工具
 
 常见的npm命令
 
-npm init  package.json
+npm init  产生一个  package.json
 
 显示
-npm list -g
-npm list 显示你已经安装过的包
+* npm list -g
+* npm list 显示你已经安装过的包
 
 
 安装
-npm install  包工具 -gd
-npm install  包工具 --save-dev
+* npm install  包工具 -gd
+* npm install  包工具 --save-dev
 
 卸载
-npm unstall  包工具 -gd  
-npm unstall  包工具
+* npm unstall  包工具 -gd  
+* npm unstall  包工具
 
 升级
-npm update  包工具 -gd  
-npm update  包工具
+* npm update  包工具 -gd  
+* npm update  包工具
 
 淘宝镜像
 http://www.cnblogs.com/trying/p/4064518.html
 
+
 借鉴
 
-http://biaoyansu.com/20.x
-https://ninghao.net/course/3421
+* http://biaoyansu.com/20.x
+* https://ninghao.net/course/3421
