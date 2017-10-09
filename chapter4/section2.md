@@ -13,4 +13,9 @@ readFile  异步
 ajax
 
 
+https://juejin.im/post/58feb88d1b69e60058a89736
+
+https://juejin.im/entry/59082f178d6d810058e5808e
+
+
 
