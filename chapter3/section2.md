@@ -1,7 +1,23 @@
-# 第2节 nodejs开发模块的分类
+# 第2节 模块的定义与引用
 
-*   核心模块
-*   扩展模块(npm install 模块)
-*   自定义模块
+* 模块的定义第一种方法
 
+``` javascript
+
+    exports.s=mianji;
+    exports.l=zhouchang;
+    exports.ABC=21;
+```
+
+* 模块的定义第二种方法
+
+```javascript
+    module.exports={
+        s:mianji,
+        l:zhouchang,
+        ABC:21
+    };
+```
+
+*   require("");
 

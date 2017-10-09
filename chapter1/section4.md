@@ -1,4 +1,4 @@
-# 第4节 nodejs 在开发工具中  编译及测试
+# 第4节 nodejs 在开发工具中  编译及调试
 1. Sublime Text3 配置 NodeJs 环境
 ___
 
@@ -10,6 +10,10 @@ http://www.w3cmark.com/2016/nodejs-build-system.html
 
 vscode  编译调试 nodejs 
 ___
+
+f5
+
+
 
 
 

@@ -4,10 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第3节 常见的npm工具包 · 大家都能看懂的 nodejs教程</title>
+        <title>第2节 npm全局安装目录设置及镜像 · 大家都能看懂的 nodejs教程</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         <meta name="identifier" content="978-3-16-148410-0" scheme="ISBN">
         
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../chapter3/" />
+    <link rel="next" href="section3.html" />
     
     
-    <link rel="prev" href="section3.html" />
+    <link rel="prev" href="section1.html" />
     
 
     </head>
@@ -200,9 +200,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="section3.html">
+        <li class="chapter active" data-level="1.3.2" data-path="section2.html">
             
-                <a href="section3.html">
+                <a href="section2.html">
             
                     
                     第2节 npm全局安装目录设置及镜像
@@ -213,9 +213,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.3" data-path="section2.html">
+        <li class="chapter " data-level="1.3.3" data-path="section3.html">
             
-                <a href="section2.html">
+                <a href="section3.html">
             
                     
                     第3节 常见的npm工具包
@@ -250,7 +250,7 @@
                 <a href="../chapter3/section1.html">
             
                     
-                    第1节 模块的定义与引用
+                    第1节 nodejs开发模块的分类
             
                 </a>
             
@@ -263,7 +263,7 @@
                 <a href="../chapter3/section2.html">
             
                     
-                    第2节 nodejs开发模块的分类
+                    第2节 模块的定义与引用
             
                 </a>
             
@@ -700,7 +700,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第3节 常见的npm工具包</a>
+        <a href=".." >第2节 npm全局安装目录设置及镜像</a>
     </h1>
 </div>
 
@@ -717,18 +717,31 @@
                                 
                                 <h1 id="&#x7B2C;2&#x8282;-npm&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x8BBE;&#x7F6E;&#x53CA;&#x955C;&#x50CF;">&#x7B2C;2&#x8282; npm&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x8BBE;&#x7F6E;&#x53CA;&#x955C;&#x50CF;</h1>
 <p>1.&#x4FEE;&#x6539; npm &#x6A21;&#x5757;&#x7684;&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x76EE;&#x5F55;(npmrc&#x6587;&#x4EF6;)
-prefix=d:\nodejs\node-global
-cache=d:\nodejs\node-cache</p>
+    prefix=d:\nodejs\node-global
+    cache=d:\nodejs\node-cache</p>
 <p>2.&#x955C;&#x50CF;</p>
-<p>npm &#x7684;&#x5B98;&#x65B9;&#x955C;&#x50CF;&#x662F;&#x975E;&#x5E38;&#x6162;</p>
-<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6DD8;&#x5B9D;&#x5B9A;&#x5236;&#x7684; cnpm (gzip &#x538B;&#x7F29;&#x652F;&#x6301;) &#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x4EE3;&#x66FF;&#x9ED8;&#x8BA4;&#x7684; npm:</p>
-<ul>
-<li>npm install -g cnpm --registry=<a href="https://registry.npm.taobao.org" target="_blank">https://registry.npm.taobao.org</a></li>
-<li>cnpm install [name]</li>
-</ul>
-<p>&#x6216;&#x8005; &#x4FEE;&#x6539;npmrc&#x6587;&#x4EF6;
-registry = <a href="https://registry.npm.taobao.org" target="_blank">https://registry.npm.taobao.org</a></p>
+<pre><code>npm &#x7684;&#x5B98;&#x65B9;&#x955C;&#x50CF;&#x662F;&#x975E;&#x5E38;&#x6162;
 
+&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6DD8;&#x5B9D;&#x5B9A;&#x5236;&#x7684; cnpm (gzip &#x538B;&#x7F29;&#x652F;&#x6301;) &#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x4EE3;&#x66FF;&#x9ED8;&#x8BA4;&#x7684; npm
+
+* npm install -g cnpm --registry=https://registry.npm.taobao.org
+* cnpm install xxx
+
+
+&#x6216;&#x8005; &#x4FEE;&#x6539;npmrc&#x6587;&#x4EF6;
+registry = https://registry.npm.taobao.org
+</code></pre><p>3.nrm -- NPM registry &#x7BA1;&#x7406;&#x5DE5;&#x5177;</p>
+<pre><code>*  &#x5B89;&#x88C5;
+npm install -g nrm
+
+* &#x4F7F;&#x7528;
+
+nrm ls
+nrm use cnpm
+</code></pre><p>4.yarn &#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;</p>
+<pre><code>* https://yarnpkg.com/en/docs/install
+* https://yarn.bootcss.com/docs/getting-started.html
+</code></pre>
                                 
                                 </section>
                             
@@ -755,12 +768,12 @@ registry = <a href="https://registry.npm.taobao.org" target="_blank">https://reg
 
             
                 
-                <a href="section3.html" class="navigation navigation-prev " aria-label="Previous page: 第2节 npm全局安装目录设置及镜像">
+                <a href="section1.html" class="navigation navigation-prev " aria-label="Previous page: 第1节 npm包的相关命令">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../chapter3/" class="navigation navigation-next " aria-label="Next page: 第3章 nodejs 模块的定义">
+                <a href="section3.html" class="navigation navigation-next " aria-label="Next page: 第3节 常见的npm工具包">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -771,7 +784,7 @@ registry = <a href="https://registry.npm.taobao.org" target="_blank">https://reg
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第3节 常见的npm工具包","level":"1.3.3","depth":2,"next":{"title":"第3章 nodejs 模块的定义","level":"1.4","depth":1,"path":"chapter3/README.md","ref":"chapter3/README.md","articles":[{"title":"第1节 模块的定义与引用","level":"1.4.1","depth":2,"path":"chapter3/section1.md","ref":"chapter3/section1.md","articles":[]},{"title":"第2节 nodejs开发模块的分类","level":"1.4.2","depth":2,"path":"chapter3/section2.md","ref":"chapter3/section2.md","articles":[]}]},"previous":{"title":"第2节 npm全局安装目录设置及镜像","level":"1.3.2","depth":2,"path":"chapter2/section3.md","ref":"chapter2/section3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"978-3-16-148410-0","variables":{},"title":"大家都能看懂的 nodejs教程","language":"zh-hans","gitbook":"*","description":"大家都能看懂的 nodejs教程!"},"file":{"path":"chapter2/section2.md","mtime":"2017-10-08T06:39:10.846Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-10-08T06:49:50.337Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第2节 npm全局安装目录设置及镜像","level":"1.3.2","depth":2,"next":{"title":"第3节 常见的npm工具包","level":"1.3.3","depth":2,"path":"chapter2/section3.md","ref":"chapter2/section3.md","articles":[]},"previous":{"title":"第1节 npm包的相关命令","level":"1.3.1","depth":2,"path":"chapter2/section1.md","ref":"chapter2/section1.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"978-3-16-148410-0","variables":{},"title":"大家都能看懂的 nodejs教程","language":"zh-hans","gitbook":"*","description":"大家都能看懂的 nodejs教程!"},"file":{"path":"chapter2/section2.md","mtime":"2017-10-09T03:23:50.668Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-09T03:39:59.898Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -779,10 +792,6 @@ registry = <a href="https://registry.npm.taobao.org" target="_blank">https://reg
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
