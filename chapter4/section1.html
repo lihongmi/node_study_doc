@@ -308,7 +308,7 @@
                 <a href="section2.html">
             
                     
-                    第2节 文件系统模块
+                    第2节 url模块
             
                 </a>
             
@@ -321,7 +321,7 @@
                 <a href="section3.html">
             
                     
-                    第3节 url模块
+                    第3节 文件系统模块
             
                 </a>
             
@@ -334,7 +334,7 @@
                 <a href="section4.html">
             
                     
-                    第4节 events
+                    第4节 buffer
             
                 </a>
             
@@ -347,7 +347,7 @@
                 <a href="section5.html">
             
                     
-                    第5节 buffer
+                    第5节 events
             
                 </a>
             
@@ -716,15 +716,43 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x7B2C;1&#x8282;-http-https&#x6A21;&#x5757;">&#x7B2C;1&#x8282; http https&#x6A21;&#x5757;</h1>
-<p>http.createServer
-    .listen</p>
-<p>res &#x54CD;&#x5E94;  req  &#x8BF7;&#x6C42;</p>
-<p>res.end
-res.write</p>
-<p>req.url</p>
-<p><a href="https://juejin.im/entry/58eaf32644d904006d4fd280" target="_blank">https://juejin.im/entry/58eaf32644d904006d4fd280</a>
-<a href="https://juejin.im/entry/58f6cfb4da2f60005d4b8458" target="_blank">https://juejin.im/entry/58f6cfb4da2f60005d4b8458</a>
-<a href="https://juejin.im/post/59000fac1b69e60058b292dd" target="_blank">https://juejin.im/post/59000fac1b69e60058b292dd</a></p>
+<h2 id="&#x4E00;-http">&#x4E00;. http</h2>
+<ol>
+<li><p>http.createServer
+ .listen</p>
+<p> res &#x54CD;&#x5E94;  req  &#x8BF7;&#x6C42;</p>
+<p> res.end
+ res.write</p>
+<p> req.url</p>
+</li>
+</ol>
+<ol>
+<li>http.request</li>
+</ol>
+<p>https &#x9700;&#x8981; SSL&#x8BC1;&#x4E66;</p>
+<h2 id="&#x4E8C;-https">&#x4E8C;. https</h2>
+<p>cygwin</p>
+<ul>
+<li>&#x79C1;&#x94A5;key&#x6587;&#x4EF6;
+openssl genrsa -out privatekey.pem 1024</li>
+<li>CSR&#x8BC1;&#x4E66;&#x7B7E;&#x540D;
+openssl req -new -key privatekey.pem -out certrequest.csr</li>
+<li>&#x79C1;&#x94A5;&#x548C;&#x8BC1;&#x4E66;&#x7B7E;&#x540D;&#x751F;&#x6210;&#x8BC1;&#x4E66;&#x6587;&#x4EF6;
+openssl x509 -req -in certrequest.csr -signkey privatekey.pem -out certification.pem</li>
+</ul>
+<pre><code class="lang-javascript">   <span class="hljs-keyword">const</span> https = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;https&apos;</span>);
+    <span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+
+    <span class="hljs-keyword">const</span> options = {
+        key: fs.readFileSync(<span class="hljs-string">&apos;./privatekey.pem&apos;</span>),
+        cert: fs.readFileSync(<span class="hljs-string">&apos;./certification.pem&apos;</span>)
+    };
+
+    https.createServer(options, (req, res) =&gt; {
+        res.writeHead(<span class="hljs-number">200</span>);
+        res.end(<span class="hljs-string">&apos;hello world\n&apos;</span>);
+    }).listen(<span class="hljs-number">8000</span>);
+</code></pre>
 
                                 
                                 </section>
@@ -757,7 +785,7 @@ res.write</p>
                 </a>
                 
                 
-                <a href="section2.html" class="navigation navigation-next " aria-label="Next page: 第2节 文件系统模块">
+                <a href="section2.html" class="navigation navigation-next " aria-label="Next page: 第2节 url模块">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -768,7 +796,7 @@ res.write</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第1节 http模块","level":"1.5.1","depth":2,"next":{"title":"第2节 文件系统模块","level":"1.5.2","depth":2,"path":"chapter4/section2.md","ref":"chapter4/section2.md","articles":[]},"previous":{"title":"第4章 nodejs 核心模块","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[{"title":"第1节 http模块","level":"1.5.1","depth":2,"path":"chapter4/section1.md","ref":"chapter4/section1.md","articles":[]},{"title":"第2节 文件系统模块","level":"1.5.2","depth":2,"path":"chapter4/section2.md","ref":"chapter4/section2.md","articles":[]},{"title":"第3节 url模块","level":"1.5.3","depth":2,"path":"chapter4/section3.md","ref":"chapter4/section3.md","articles":[]},{"title":"第4节 events","level":"1.5.4","depth":2,"path":"chapter4/section4.md","ref":"chapter4/section4.md","articles":[]},{"title":"第5节 buffer","level":"1.5.5","depth":2,"path":"chapter4/section5.md","ref":"chapter4/section5.md","articles":[]},{"title":"第6节 全局变量","level":"1.5.6","depth":2,"path":"chapter4/section6.md","ref":"chapter4/section6.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"978-3-16-148410-0","variables":{},"title":"大家都能看懂的 nodejs教程","language":"zh-hans","gitbook":"*","description":"大家都能看懂的 nodejs教程!"},"file":{"path":"chapter4/section1.md","mtime":"2017-10-09T12:48:41.941Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-09T13:03:52.056Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第1节 http模块","level":"1.5.1","depth":2,"next":{"title":"第2节 url模块","level":"1.5.2","depth":2,"path":"chapter4/section2.md","ref":"chapter4/section2.md","articles":[]},"previous":{"title":"第4章 nodejs 核心模块","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[{"title":"第1节 http模块","level":"1.5.1","depth":2,"path":"chapter4/section1.md","ref":"chapter4/section1.md","articles":[]},{"title":"第2节 url模块","level":"1.5.2","depth":2,"path":"chapter4/section2.md","ref":"chapter4/section2.md","articles":[]},{"title":"第3节 文件系统模块","level":"1.5.3","depth":2,"path":"chapter4/section3.md","ref":"chapter4/section3.md","articles":[]},{"title":"第4节 buffer","level":"1.5.4","depth":2,"path":"chapter4/section4.md","ref":"chapter4/section4.md","articles":[]},{"title":"第5节 events","level":"1.5.5","depth":2,"path":"chapter4/section5.md","ref":"chapter4/section5.md","articles":[]},{"title":"第6节 全局变量","level":"1.5.6","depth":2,"path":"chapter4/section6.md","ref":"chapter4/section6.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"978-3-16-148410-0","variables":{},"title":"大家都能看懂的 nodejs教程","language":"zh-hans","gitbook":"*","description":"大家都能看懂的 nodejs教程!"},"file":{"path":"chapter4/section1.md","mtime":"2017-10-10T05:59:57.311Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-12T03:23:21.296Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

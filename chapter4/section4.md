@@ -1,12 +1,6 @@
-# 第4节 events 模块
+# 第5节 buffer stream
 
-events
+在Buffer和String之间转换的
 
-EventEmitter
-
-on
-
-emmiter
-
-removeListener
+编码格式是否正确，可以使用Buffer.isEncoding(encoding)方法来测试。
 
