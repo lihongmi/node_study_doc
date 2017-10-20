@@ -1,4 +1,10 @@
 # 第3节 通讯
+
+* socket.io
+
+* ws   (websocket)
+
+
 socket 套节字
 
 net模块
