@@ -1,2 +1,2 @@
-# 第6章 mongodb
+# 第6章 express
 
