@@ -38,5 +38,18 @@ node 第三方模块 列举
 
 
 
+* JWT：JSON WEB TOKEN
+* 基于 TOKEN 的身份验证
+
+借鉴 
+
+* https://nodelover.me/course/imovie-backend
+
+* http://study.163.com/course/introduction.htm?courseId=1003675016#/courseDetail?tab=1
+
+
+
+
+
 
 
