@@ -1,4 +1,4 @@
-# 第7章 nodejs文章发布系统
+# 第8章 nodejs文章发布系统
 
 cookie 
 

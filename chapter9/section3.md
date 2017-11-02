@@ -1,7 +1,7 @@
 # 第3节 todos
 
 * 发布自己的 npm 包
-* 单元测试 & UI 测试
+* 单元测试
  1.mocha 2.chai 3.Istanbul 4.Benchmark
 
 * UI 测试常用工具
@@ -11,17 +11,19 @@
 * Nodejs日志管理log4js
 * Nodejs来管理定时任务later|cron
 * Commander写自己的Nodejs命令
-* node 第三方模块 列举
-* JWT：JSON WEB TOKEN
-* 基于 TOKEN 的身份验证
+* JWT：JSON WEB TOKEN 基于 TOKEN 的身份验证
 * rest api
+* web安全 XSS csrf
+* node 第三方模块 列举
 
-借鉴 
+文章发布系统 todos
 
-* https://nodelover.me/course/imovie-backend
-* https://cnodejs.org/topic/58c1477b06dbd608756d0bca
-* http://blog.fens.me/nodejs-express-passport/
-* http://blog.fens.me/nodejs-oauth-passport/
+* 文章支持markdown语法
+* 文章列表添加分页功能
+* 文章静态化
+* 头像(ajax)上传
+
+* https://github.com/expressjs/multer
 
 
 
